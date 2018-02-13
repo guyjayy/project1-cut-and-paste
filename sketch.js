@@ -15,13 +15,6 @@ var ey;
 var exs;
 var eys;
 
-var bgimg;
-// var pos={
-//   x:0,
-//   y:0,
-//   xs:0,
-//   xy:0
-// };
 
 function preload() {
   img = loadImage("images/pic2.jpg");
@@ -29,8 +22,6 @@ function preload() {
 
 function setup() {
   createCanvas(img.width, img.height);
-  image(img, 0, 0);
-  bgimg=createGraphics(img.width, img.height);
 }
 function draw() {
   if (keyIsDown(LEFT_ARROW)) {
@@ -62,18 +53,17 @@ function draw() {
     }
   }
 
+  clear();
 
-  bgimg.updatePixels();
-  bgimg.noFill();
-  bgimg.strokeWeight(4);
-  bgimg.stroke(255,0,0);
-  bgimg.rect(dx,dy,dxs,dys);
-  bgimg.stroke(255,255,0);
-  bgimg.rect(x,y,xs,ys);
-  bgimg.clear();
+  image(img, 0, 0);
 
-  image(bgimg, 0, 0);
-  //image(img, ex, ey, exs, eys, dx, dy, dxs, dys);
+  noFill();
+  strokeWeight(4);
+  stroke(255,0,0);
+  rect(dx,dy,dxs,dys);
+  stroke(255,255,0);
+  rect(x,y,xs,ys);
+
   copy(img, dx, dy, dxs, dys, ex, ey, exs, eys);
 
 }
