@@ -116,7 +116,7 @@ function keyTyped() {
     nobox=1
   }
   if (key === 's') {
-    saveCanvas(canvas, 'custom'+imageName, 'png');
+    saveCanvas(canvas, 'custom', 'png');
   }
 
 }
