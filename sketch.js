@@ -23,7 +23,7 @@ var eys;
 // };
 
 function preload() {
-  img = loadImage("images/jomy.jpg");
+  img = loadImage("images/1.jpg");
 }
 
 function setup() {
